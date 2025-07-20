@@ -14,12 +14,23 @@ class _ArticlePageState extends State<ArticlePage> {
       appBar: AppBar(
         title: const Text('Article Page'),
       ),
-      body: Center(
-        child: Text(
-          'This is the article page.',
-          style: Theme.of(context).textTheme.headlineMedium,
+      body: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              "Data",
+              style: TextStyle(
+                fontSize: 44,
+                fontWeight: FontWeight.w900,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+          ],
         ),
-      ),
+      )
     );
   }
 }
