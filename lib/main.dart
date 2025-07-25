@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_batch_8/pages/day_4/layout_example_page.dart';
+
+import 'pages/day_4/list_view_separated_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LayoutExamplePage(),
+      home: ListViewSeparatedPage(),
     );
   }
 }

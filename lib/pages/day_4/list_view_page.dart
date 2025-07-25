@@ -1,0 +1,405 @@
+import 'package:flutter/material.dart';
+
+class ListViewPage extends StatefulWidget {
+  const ListViewPage({super.key});
+
+  @override
+  State<ListViewPage> createState() => _ListViewPageState();
+}
+
+class _ListViewPageState extends State<ListViewPage> {
+
+  final footballPlayers = [
+    'Lionel Messi',
+    'Cristiano Ronaldo',
+    'Neymar Jr',
+    'Kylian Mbappé',
+    'Kevin De Bruyne',
+    'Mohamed Salah',
+    'Robert Lewandowski',
+    'Virgil van Dijk',
+    'Karim Benzema',
+    'Sadio Mané',
+    'Harry Kane',
+    'Luka Modrić',
+    'Eden Hazard',
+    'Son Heung-min',
+    'Gareth Bale',
+    'Paul Pogba',
+    'Antoine Griezmann',
+    'Raheem Sterling',
+    'Sergio Ramos',
+    'Gianluigi Donnarumma',
+    'Alisson Becker',
+    'Ederson Moraes',
+    'Marc-André ter Stegen',
+    'Thibaut Courtois',
+    'Jan Oblak',
+    'Manuel Neuer',
+    'Kepa Arrizabalaga',
+    'Hugo Lloris',
+    'David de Gea',
+    'Keylor Navas',
+    'Edouard Mendy',
+    'Jordan Pickford',
+    'Bernd Leno',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('List View Page'),
+      ),
+      body: ListView(
+        reverse: true,
+        children: [
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          SizedBox(
+            height: 200,
+            child: ListView(
+              shrinkWrap: true,
+              physics: ClampingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.brown,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.purple,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.grey,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.blueGrey,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.brown,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.purple,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.grey,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.blueGrey,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.brown,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.purple,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.grey,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+                Container(
+                  width: 100,
+                  height: 200,
+                  color: Colors.blueGrey,
+                  padding: const EdgeInsets.all(16),
+                  child: const Text('List View Content'),
+                ),
+              ],
+            ),
+          ),
+          ListView(
+            shrinkWrap: true,
+            physics: ClampingScrollPhysics(),
+            children: footballPlayers.map((e) => Container(
+              width: double.infinity,
+              color: Colors.red,
+              padding: const EdgeInsets.all(16),
+              child: Text(e),
+            ),).toList(),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.green,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.blue,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+          Container(
+            width: double.infinity,
+            color: Colors.red,
+            padding: const EdgeInsets.all(16),
+            child: const Text('List View Content'),
+          ),
+        ],
+      ),
+    );
+  }
+}
