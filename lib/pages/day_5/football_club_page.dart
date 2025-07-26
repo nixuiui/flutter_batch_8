@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_batch_8/pages/day_5/football_player_page.dart';
+import 'package:flutter_batch_8/utils/routes.dart';
 
 class FootballClubPage extends StatefulWidget {
   const FootballClubPage({super.key});
@@ -35,13 +35,10 @@ class _FootballClubPageState extends State<FootballClubPage> {
             ),
             title: Text(footballClubs[index]),
             onTap: () async {
-              final result = await Navigator.push(
+              final result = await Navigator.pushNamed(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => FootballPlayerPage(
-                    clubName: footballClubs[index],
-                  ),
-                ),
+                AppRoutes.footballPlayer,
+                arguments: footballClubs[index],
               );
               if((result as String?)?.isNotEmpty ?? false) {
                 setState(() {
