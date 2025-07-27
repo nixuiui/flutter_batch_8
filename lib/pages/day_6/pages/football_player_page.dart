@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_batch_8/pages/day_6/cubits/football_player_cubit.dart';
 import 'package:flutter_batch_8/pages/day_6/cubits/football_player_state.dart';
+import 'package:flutter_batch_8/pages/day_6/cubits/theme_cubit.dart';
 import 'package:flutter_batch_8/utils/data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,6 +27,17 @@ class _FootballPlayerPageState extends State<FootballPlayerPage> {
           },
         ),
         actions: [
+          IconButton(
+            onPressed: () {
+              context.read<ThemeCubit>().toggleTheme();
+            },
+            icon: Icon(
+              context.watch<ThemeCubit>().state == ThemeMode.light
+                  ? Icons.dark_mode
+                  : Icons.light_mode,
+            ),
+          ),
+
           PopupMenuButton<String>(
             onSelected: (club) {
               cubit.setClub(club);
