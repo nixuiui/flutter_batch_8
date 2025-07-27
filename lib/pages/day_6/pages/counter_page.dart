@@ -17,20 +17,24 @@ class _CounterPageState extends State<CounterPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<CounterCubit, int>(
-      bloc: cubit,
-      listener: (context, state) {
-        if(state % 5 == 0) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Counter reached $state!'))
-          );
-        } 
-        if(state == 17) {
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) => FootballClubPage(),
-          ));
-        }
-      },
+    return MultiBlocListener(
+      listeners: [
+        BlocListener<CounterCubit, int>(
+          bloc: cubit,
+          listener: (context, state) {
+            if(state % 5 == 0) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Counter reached $state!'))
+              );
+            }
+            if(state == 17) {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => FootballClubPage(),
+              ));
+            }
+          }
+        )
+      ],
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
