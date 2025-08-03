@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_batch_8/pages/day_6/cubits/theme_cubit.dart';
+import 'package:flutter_batch_8/pages/day_7/data/local_storage/theme_local_storage.dart';
 import 'package:flutter_batch_8/pages/day_7/pages/product_page.dart';
 import 'package:flutter_batch_8/singleton.dart';
 import 'package:flutter_batch_8/utils/routes.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => ThemeCubit()),
+        BlocProvider(create: (context) => ThemeCubit(ThemeLocalStorage(getIt.get()))..loadTheme()),
       ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, state) {
