@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_batch_8/pages/day_6/cubits/theme_cubit.dart';
-import 'package:flutter_batch_8/pages/day_6/pages/football_player_page.dart';
+import 'package:flutter_batch_8/pages/day_7/pages/product_page.dart';
+import 'package:flutter_batch_8/singleton.dart';
 import 'package:flutter_batch_8/utils/routes.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await setupSingleton();
   runApp(const MyApp());
 }
 
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
             darkTheme: ThemeData.dark(),
             themeMode: state,
             // initialRoute: AppRoutes.homeTab,
-            home: FootballPlayerPage(),
+            home: ProductPage(),
           );
         }
       ),
